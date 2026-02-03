@@ -4,6 +4,87 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 
 ----
 
+## 🏗️ Data Warehouse Architecture Overview
+
+<img width="992" height="561" alt="Data Architecture" src="https://github.com/user-attachments/assets/319f7e22-46e5-41d3-9c1e-a9fbe69a54b4" />
+This project follows a Medallion Architecture (Bronze → Silver → Gold) to transform raw source data into analytics-ready datasets for reporting and advanced analysis.
+
+### 🔹 Data Sources
+
+The pipeline starts with operational systems:
+
+CRM system — Customer and sales-related data
+
+ERP system — Product, category, and location data
+
+These systems provide raw structured data that is ingested into the data warehouse.
+
+### 🥉 Bronze Layer — Raw Data Storage
+
+The Bronze layer is the landing zone for raw data.
+
+Purpose:
+
+Store data exactly as received from source systems
+
+Preserve original structure and values
+
+Enable reprocessing if transformation logic changes
+
+Characteristics:
+
+Minimal or no transformation
+
+Full data loads from CSV/source extracts
+
+Acts as a historical backup of source data
+
+### 🥈 Silver Layer — Cleaned & Standardized Data
+
+The Silver layer transforms raw data into structured, quality-controlled datasets.
+
+Purpose:
+
+Clean and standardize data
+
+Apply business rules
+
+Remove duplicates and invalid records
+
+Typical Transformations:
+
+Standardizing gender and marital status values
+
+Fixing date formats and invalid dates
+
+Recalculating sales amounts when inconsistent
+
+Deriving product categories and normalized keys
+
+This layer represents trusted, consistent operational data.
+
+### 🥇 Gold Layer — Business & Analytics Model
+
+The Gold layer contains data modeled for analytics using a star schema.
+
+Purpose:
+
+Provide business-friendly, query-optimized datasets
+
+Support reporting, dashboards, and analytical tools
+
+Structure:
+
+Dimension Tables (e.g., dim_customers, dim_products)
+→ Descriptive attributes used for filtering and grouping
+
+Fact Table (e.g., fact_sales)
+→ Measurable business events like sales transactions
+
+This layer is designed for fast queries and easy understanding by BI tools.
+
+----
+
 ## 🚀 Project Requirements
 
 ### Building the Data Warehouse (Data Engineering)
