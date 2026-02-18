@@ -1,123 +1,208 @@
-# sql-data-warehouse-project
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+# End-to-End Sales Data Warehouse & Analytics Project
 
-----
+Welcome to the **End-to-End Sales Data Project** 🚀  
 
-## 🏗️ Data Warehouse Architecture Overview
+This project demonstrates a complete data workflow — from raw data ingestion to analytical insights — using SQL Server and advanced SQL techniques.
 
+It showcases the full lifecycle of a modern data solution:
+
+Data Sources → Data Warehouse → Analytics → BI Dashboard (Coming Soon)
+
+The project is designed as a portfolio to highlight practical skills in **data engineering**, **data analytics**, and **business intelligence**.
+
+---
+
+# 🏗️ Project Architecture Overview
 <img width="992" height="564" alt="Data Architecture" src="https://github.com/user-attachments/assets/5b11e132-5305-4e1c-9bad-246ec32297a6" />
-This project follows a Medallion Architecture (Bronze → Silver → Gold) to transform raw source data into analytics-ready datasets for reporting and advanced analysis.
+The solution follows the **Medallion Architecture (Bronze → Silver → Gold)** approach to transform raw operational data into analytics-ready datasets.
+Source Systems → Bronze → Silver → Gold → Analytics → Dashboard
 
-### 🔹 Data Sources
+---
 
-The pipeline starts with operational systems:
+# 🔹 Data Sources
 
-CRM system — Customer and sales-related data
+The project integrates data from two simulated business systems:
 
-ERP system — Product, category, and location data
+- **CRM System** — customer information and sales transactions  
+- **ERP System** — product details, categories, and location data  
 
-These systems provide raw structured data that is ingested into the data warehouse.
+The datasets are provided as CSV files and loaded into SQL Server for processing.
 
-### 🥉 Bronze Layer — Raw Data Storage
+---
 
-The Bronze layer is the landing zone for raw data.
+# 🏢 Data Warehouse (Data Engineering)
 
-Purpose:
+The data warehouse consolidates and transforms raw data into a structured analytical model.
 
-Store data exactly as received from source systems
+### Architecture Layers
 
-Preserve original structure and values
+#### 🥉 Bronze Layer — Raw Data
 
-Enable reprocessing if transformation logic changes
+- Stores data exactly as received from source systems  
+- Minimal transformation  
+- Preserves historical data for reprocessing  
 
-Characteristics:
+#### 🥈 Silver Layer — Cleaned & Standardized Data
 
-Minimal or no transformation
+- Data cleaning and normalization  
+- Removing duplicates and invalid records  
+- Standardizing categorical values  
+- Resolving inconsistent business data  
 
-Full data loads from CSV/source extracts
+#### 🥇 Gold Layer — Business Model
 
-Acts as a historical backup of source data
+- Star schema design for analytics  
+- Fact table for sales transactions  
+- Dimension tables for customers, products, and dates  
+- Optimized for reporting and BI tools  
 
-### 🥈 Silver Layer — Cleaned & Standardized Data
+The warehouse serves as the foundation for analytics and reporting.
 
-The Silver layer transforms raw data into structured, quality-controlled datasets.
+---
 
-Purpose:
+# 📊 Analytics & Business Insights (Data Analysis)
 
-Clean and standardize data
+After building the warehouse, SQL-based analytics were developed to generate business insights and performance reports.
 
-Apply business rules
+The analytics layer simulates the role of a **Data Analyst / BI Analyst**, transforming structured data into decision-support information.
 
-Remove duplicates and invalid records
+---
 
-Typical Transformations:
+## 📈 Analytical Reports
 
-Standardizing gender and marital status values
+### 👥 Customer Report (report_customers)
 
-Fixing date formats and invalid dates
+A customer-focused analytical view providing:
 
-Recalculating sales amounts when inconsistent
+- Age group segmentation  
+- Customer segments (VIP, Regular, New)  
+- Total orders, sales, and quantity purchased  
+- Customer recency  
+- Average order value  
+- Average monthly spend  
+- Customer lifespan  
 
-Deriving product categories and normalized keys
+---
 
-This layer represents trusted, consistent operational data.
+### 📦 Product Report (report_products)
 
-### 🥇 Gold Layer — Business & Analytics Model
+A product performance report including:
 
-The Gold layer contains data modeled for analytics using a star schema.
+- Category and subcategory analysis  
+- Unique customers per product  
+- Revenue-based segmentation  
 
-Purpose:
+Product Segments:
 
-Provide business-friendly, query-optimized datasets
+- High Performers  
+- Mid Range  
+- Low Performers  
 
-Support reporting, dashboards, and analytical tools
+Additional metrics:
 
-Structure:
+- Average order revenue  
+- Average monthly revenue  
+- Product recency  
+- Product lifespan  
 
-Dimension Tables (e.g., dim_customers, dim_products)
-→ Descriptive attributes used for filtering and grouping
+---
 
-Fact Table (e.g., fact_sales)
-→ Measurable business events like sales transactions
+# 🧠 SQL Techniques Demonstrated
 
-This layer is designed for fast queries and easy understanding by BI tools.
+- Aggregations (SUM, COUNT, AVG)  
+- Window Functions  
+- Date Functions  
+- Conditional Logic (CASE WHEN)  
+- Multi-table Joins  
+- Common Table Expressions (CTEs)  
+- Views for reusable reporting  
+- Analytical query optimization  
 
-----
+---
 
-## 🚀 Project Requirements
+# 📈 Dashboard (Coming Soon)
 
-### Building the Data Warehouse (Data Engineering)
+A Power BI dashboard will be added to visualize:
 
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+- Sales KPIs  
+- Customer segmentation  
+- Product performance  
+- Revenue trends  
+- Business insights  
 
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+---
 
- ----
+# 🗂️ Repository Structure
+project/
+│
+├── data-warehouse/
+│ ├── scripts/
+│ └── README.md
+│
+├── analytics/
+│ ├── scripts/
+│ └── README.md
+│
+├── datasets/
+│
+├── dashboards/ (Power BI — coming soon)
+│
+└── README.md
 
- ### BI: Analytics & Reporting (Data Analysis)
+---
 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+# 🚀 Skills Demonstrated
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
+### Data Engineering
 
-----
+- ETL Pipeline Development  
+- Medallion Architecture  
+- Data Cleaning & Integration  
+- Dimensional Modeling (Star Schema)  
 
-## 🛡️ License
+### Data Analytics
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+- KPI Development  
+- Customer & Product Segmentation  
+- Time-Series Analysis  
+- Business Reporting  
 
-## 🌟 About Me
+### Technical Skills
 
-Hi there! I'm **Jameel Hanouneh**. I’m a fresh graduated Biomedical Engineering student, sharping my SQL skills and this is my full data warehouse project.
-and the credits go to **Baraa Khatib Salkini**, also known as **Data With Baraa**
+- SQL Server  
+- T-SQL  
+- Analytical SQL  
+- Data Modeling  
+- Business Intelligence Concepts  
+
+---
+
+# 🛠️ Tools Used
+
+- SQL Server  
+- T-SQL  
+- Power BI (planned)  
+
+---
+
+# 🙏 Credits
+
+This project was inspired by learning content from  
+
+**Baraa Khatib Salkini (Data With Baraa)**  
+
+---
+
+# 👤 About Me
+
+Hi! I'm **Jameel Hanouneh**, a Biomedical Engineering graduate with a strong interest in data analytics and data engineering.
+
+This project represents my hands-on experience in building data solutions, transforming raw data into meaningful business insights, and applying SQL in real-world analytical scenarios.
+
+---
+
+# 🛡️ License
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and share this project with proper attribution.
+
