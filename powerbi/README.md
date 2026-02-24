@@ -28,7 +28,7 @@ This dashboard focuses on customer behavior, segmentation, and sales distributio
 
 ### Preview
 
-![Customers Dashboard](images/Customers Dashboard.PNG)
+![Customers Dashboard](images/Customers%20Dashboard.PNG)
 
 ---
 
@@ -53,7 +53,7 @@ This dashboard analyzes product sales performance, category contribution, and ge
 
 ### Preview
 
-![Products Dashboard](images/Products Dashboard.PNG)
+![Products Dashboard](images/Products%20Dashboard.PNG)
 
 ---
 
