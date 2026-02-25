@@ -128,15 +128,15 @@ Interactive dashboards were developed using the Gold Layer of the Data Warehouse
 
 Two professional dashboards were created:
 
-👥 Customer Dashboard
-![Customer Dashboard](powerbi/images/powerbi/Customers%20Dashboard.PNG)
+## 👥 Customer Dashboard
+![Customer Dashboard](powerbi/images/Customers%20Dashboard.PNG)
 - Customer distribution and segmentation
 - Sales trends over time
 - Geographic customer analysis
 - Top customers by orders and revenue
 - KPI summary (Customers, Sales, Orders)
 
-📦 Product Performance Dashboard
+### 📦 Product Performance Dashboard
 ![Product Dashboard](powerbi/images/Products%20Dashboard.PNG)
 - Sales by category and product
 - Orders distribution across categories
