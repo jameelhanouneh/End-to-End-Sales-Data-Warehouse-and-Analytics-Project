@@ -154,30 +154,6 @@ Key Insights Discovered:
 Dashboard files are available in the `/powerbi` folder.
 ---
 
-🗂️ Repository Structure
-
-project/
-│
-├── data-warehouse/
-│   ├── scripts/
-│   └── README.md
-│
-├── analytics/
-│   ├── scripts/
-│   └── README.md
-│
-├── powerbi/
-│   ├── Sales Dashboard.pbix
-│   ├── Customers Dashboard.PNG
-│   ├── Products Dashboard.PNG
-│   └── README.md
-│
-├── datasets/
-│
-└── README.md
-
----
-
 🚀 Skills Demonstrated
 
 Data Engineering
